@@ -7,11 +7,16 @@
 </ion-header>
 
 <ion-content padding>
+  Dual fails to update on button clicks
   <ion-range dualKnobs="true" min="1" max="100" [(ngModel)]="bindingDual" (ionChange)="rangeChange()"></ion-range>
-  <ion-button (click)="lowerClick(-1)">L-</ion-button><ion-button (click)="lowerClick(1)">L+</ion-button>
-  <ion-button (click)="upperClick(-1)">U-</ion-button><ion-button (click)="upperClick(1)">U+</ion-button>
-
-
-  <ion-range   min="1" max="100" [(ngModel)]="bindingSingle" (ionChange)="rangeChange()"></ion-range>
-  <ion-button (click)="singleClick(-1)">S-</ion-button><ion-button (click)="singleClick(1)">S+</ion-button>
+  <ion-button (click)="lowerClick(-1)">L-</ion-button>
+  <ion-button (click)="lowerClick(1)">L+</ion-button>
+  <ion-button (click)="upperClick(-1)">U-</ion-button>
+  <ion-button (click)="upperClick(1)">U+</ion-button>
+  <p></p>
+  <p></p>
+  Single updates correctly on button clicks
+  <ion-range min="1" max="100" [(ngModel)]="bindingSingle" (ionChange)="rangeChange()"></ion-range>
+  <ion-button (click)="singleClick(-1)">S-</ion-button>
+  <ion-button (click)="singleClick(1)">S+</ion-button>
 </ion-content>
