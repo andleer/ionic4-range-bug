@@ -16,7 +16,6 @@ export class HomePage {
 
   public lowerClick(change: number) {
     this.bindingDual.lower += change;
-
     this.logBindings('upper()')
   }
 
