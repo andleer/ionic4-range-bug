@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic 4 Range Bug
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-range dualKnobs="true" min="1" max="100" [(ngModel)]="bindingDual" (ionChange)="rangeChange()"></ion-range>
+  <ion-button (click)="lowerClick(-1)">L-</ion-button><ion-button (click)="lowerClick(1)">L+</ion-button>
+  <ion-button (click)="upperClick(-1)">U-</ion-button><ion-button (click)="upperClick(1)">U+</ion-button>
+
+
+  <ion-range   min="1" max="100" [(ngModel)]="bindingSingle" (ionChange)="rangeChange()"></ion-range>
+  <ion-button (click)="singleClick(-1)">S-</ion-button><ion-button (click)="singleClick(1)">S+</ion-button>
+</ion-content>
