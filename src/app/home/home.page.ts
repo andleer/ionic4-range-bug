@@ -10,27 +10,34 @@ export class HomePage {
   public bindingSingle: number = 50;
   public bindingDual: { lower: number, upper: number } = { lower: 25, upper: 75 }
 
-  public rangeChange() {
-    this.logBindings('change()')
+  public singleRangeChange() {
+    this.logSingleBindings();
+  }
+
+  public dualRangeChange() {
+    this.logDualBindings();
   }
 
   public lowerClick(change: number) {
     this.bindingDual.lower += change;
-    this.logBindings('upper()')
+    this.logDualBindings();
   }
 
   public upperClick(change: number) {
     this.bindingDual.upper += change;
-    this.logBindings('upper()')
+    this.logDualBindings();
   }
 
   public singleClick(change: number) {
     this.bindingSingle += change;
-    this.logBindings('single()')
+    this.logSingleBindings();
   }
 
-  private logBindings(name: string) {
-    console.log(`${name} Lower:${this.bindingDual.lower} Upper: ${this.bindingDual.upper}`)
-    console.log(`${name} Single:${this.bindingSingle}`)
+  private logDualBindings() {
+    console.log(`Lower:${this.bindingDual.lower} Upper: ${this.bindingDual.upper}`)
+  }
+
+  private logSingleBindings() {
+    console.log(`Single:${this.bindingSingle}`)
   }
 }
